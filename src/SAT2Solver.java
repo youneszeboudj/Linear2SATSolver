@@ -6,6 +6,28 @@ import java.util.*;
 
 public class SAT2Solver {
 
+    /*to test */
+    public static void main(String args[]) throws IOException {
+        File input = null;
+        if(args.length>0){
+            input= new File(args[0]);
+            if(!input.exists()){
+                System.out.println("the file specified does not exist.");
+                return;
+            }
+        }
+        ArrayList<Literal[]> clauses= new ArrayList<>();
+        /*constructing the set is easy, just read the file line by line, split each line by speaces to extract the two literals,
+        when it is a non negated literal use the first Literal constructor 'Literal(String name)', and if it is a negated literal
+        use the second one 'Literal(String name, boolean ignored)' and pass anything to the second parameter.
+        for example : the clause (a -b) :
+            Literal lit_a= new Literal("a"); 
+            Literal lit_b= new Literal("b", true);                
+        after creating the two literals, add them to a Littral[] array and add this one to clauses list.
+        */
+        //...
+        boolean isSetSat= SAT2Solver.solve(clauses);
+    }
     /**
      * @param set : clauses list, each element is 2-dimension array holding the two litterals of a clause
      * @return : true if the set is satisfiable, false otherwise
