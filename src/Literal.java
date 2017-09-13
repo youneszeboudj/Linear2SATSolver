@@ -13,6 +13,7 @@ public class Literal {
     String name;
     boolean completion= !true; //is i a negated literal
 
+    //there is a constructor for each literal type for other purposes
     //constructor for no negated literal (a for example)
     public Literal(String name) {
         this.name = name;
